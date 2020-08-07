@@ -9,6 +9,7 @@ body {
     display: flex;
     flex-direction: column;
     height: 100%;
+    width: 100vw;
     margin-bottom: 8vh;
     background-color: white;
 }
@@ -158,7 +159,7 @@ hr {
 
 h3{
     margin-bottom: 3vh;
-    font-size: 3.5vh;
+    font-size: 4vh;
     color: darkorange;
 }
 
@@ -220,7 +221,6 @@ p{
 .cardsImage {
    display: flex;
    justify-content: center;
-
 }
 
 .cardsTitle h4{
@@ -237,9 +237,16 @@ p{
 .cardsPrice, .cardsStock {
     display: flex;
     justify-content: center;
-    padding: 1vh;
-    font-size: 1.2vw;
-    bottom: 0;
+    padding-top: 2vw;
+    height: 100%;
+    font-size: 1.4vw;
+    background-color: rgb(255, 140, 0);
+    
+}
+
+.cardsStock p{
+    color: honeydew;
+    font-weight: 500;
 }
 
 .cardsBtn {

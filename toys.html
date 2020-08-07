@@ -8,7 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;500;600&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="icon" type="image/png" href="PARA LOGO/kisspng-standard-schnauzer-miniature-schnauzer-giant-schna-love-dogs-5ae0753631ef50.4139786015246595102045.png">
+    <link rel="icon" type="image/png" href="assets/kisspng-standard-schnauzer-miniature-schnauzer-giant-schna-love-dogs-5ae0753631ef50.4139786015246595102045.png">
 </head>
 <body>
     <div id="app">
@@ -37,7 +37,7 @@
                         <div class="cardsTitle">
                             <h4>{{value.nombre}}</h4>
                         </div>
-                        <div class="cardsPrice">
+                        <div class="cardsStock">
                             <p v-if="value.stock <=5">${{value.precio}} - ¡Últimas unidades!</p>
                             <p v-else>${{value.precio}} - Stock: {{value.stock}}</p>
                         </div>
@@ -48,6 +48,9 @@
                         </div>
                         <div class="cardsText">
                             <p>{{value.descripcion}}</p>
+                        </div>
+                        <div class="cardsBtn">
+                            <button class="wishListBtn">Agregar al carrito</button>
                         </div>
                     </figure>
                 </div>

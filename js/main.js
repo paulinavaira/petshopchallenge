@@ -31,6 +31,14 @@ $('.btnContact').click(function(){
   });
 });
 
+$('.wishListBtn').click(function(){  
+  swal({
+    title: "¡Listo!",
+    text: "Se ha agregado a la lista de deseos",
+    icon: "success",
+             }
+)})
+
 //Pido info a la API
 fetch('https://apipetshop.herokuapp.com/api/articulos')
   .then(function(response) {
