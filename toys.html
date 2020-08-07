@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Pet-Shop Franco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;500;600&display=swap" rel="stylesheet"> 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="PARA LOGO/kisspng-standard-schnauzer-miniature-schnauzer-giant-schna-love-dogs-5ae0753631ef50.4139786015246595102045.png">
@@ -31,21 +32,21 @@
                 <div class="cards" v-for="value in toys">
                     <figure class="cardsFront">
                         <div class="cardsImage">
-                            <img :src="value.imagen" alt="foto del juguete" width="200vh">
+                            <img :src="value.imagen" alt="foto del juguete" width="200vh" class="cardsImg">
                         </div>
-                        <div class="cardsText">
+                        <div class="cardsTitle">
                             <h4>{{value.nombre}}</h4>
                         </div>
                         <div class="cardsPrice">
-                            <p>${{value.precio}}</p>
-                        </div>
-                        <div class="cardsStock">
-                            <p>Stock: {{value.stock}}</p>
+                            <p v-if="value.stock <=5">${{value.precio}} - ¡Últimas unidades!</p>
+                            <p v-else>${{value.precio}} - Stock: {{value.stock}}</p>
                         </div>
                     </figure>
                     <figure class="cardsBack">
+                        <div class="cardsTitle">
+                            <h4>{{value.nombre}}</h4>
+                        </div>
                         <div class="cardsText">
-                            <h3>{{value.nombre}}</h3>
                             <p>{{value.descripcion}}</p>
                         </div>
                     </figure>
@@ -54,9 +55,8 @@
         </section>
     </div>
     <div class="footer">
-        <div>
-            <h3>Visita nuestras redes sociales!</h3>
-        </div>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
     </div>
     <div class="loader"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"

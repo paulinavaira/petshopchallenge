@@ -15,10 +15,10 @@
 $('.btnContact').click(function(){  
   swal({
     title:"¿Estás seguro?",
-    text: "Corroborá que los datos sean correctos",
+    text: "Corroborá que los datos sean correctos.",
     buttons: {
            cancel: true,
-           confirm: "Aceptar"
+           confirm: "Seguir"
              }
   }).then( val => {
     if(val)  {
@@ -49,7 +49,6 @@ function miPrograma(data){
         data:{
             toys : [],
             pharmacy : [],
-            stock : [],
 }
 });
 
@@ -65,15 +64,4 @@ var pharmacy = data.filter(function(pharmacy) {
 });
 
 app.pharmacy = pharmacy;
-
-//Obtengo el stock menor a 5
-var stock5 = []
-    for (var i = 0; i < data.length; i++) {
-        if (data[i].stock <= 5){ 
-        stock5.push('Últimas unidades')
-      }   else {
-        stock5.push(data[i].stock)
-      }
-    }
 }
-stock.push(stock5)

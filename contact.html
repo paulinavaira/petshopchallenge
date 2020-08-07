@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <title>Pet-Shop Franco</title>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam:wght@100;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Expanded:wght@300;500;600&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="css/styles.css">
     <link rel="icon" type="image/png" href="PARA LOGO/kisspng-standard-schnauzer-miniature-schnauzer-giant-schna-love-dogs-5ae0753631ef50.4139786015246595102045.png">
 </head>
@@ -31,40 +32,36 @@
         <div class="contactForm">
             <div class="inputBox">
                 <label for="name">Nombre:</label>
-                <input type="text" id="name" name="name" placeholder="Ingresá tu nombre"/>
+                <input type="text" id="name" name="name" placeholder="Ingresá tu nombre" required/>
             </div>
             <div class="inputBox">
-                <label for="email">Email:</label>
+                <label for="email">Email*:</label>
                 <input type="email" id="email" name="email" placeholder="Ingresá tu email"/>
             </div>
             <div class="inputBox">
-                <label for="tel">Teléfono:</label>
+                <label for="tel">Teléfono*:</label>
                 <input type="tel" id="tel" name="tel" placeholder="Ingresá tu teléfono, ej. 3385-123456"/>
             </div>
-            <!-- <div class="inputBox">
-                <label for="petName">Nombre de tu mascota:</label>
-                <input type="text" id="petName" name="petName" placeholder="Ingresá el nombre de tu mascota"/>
-            </div> -->
             <div class="petType">
                 <h5>Qué es tu mascota?</h5>
                 <label for="dog">Perro</label>
-                <input type="radio" id="dog" value="dog" name="pet"/>
+                <input type="radio" id="dog" value="dog" name="pet" required/>
                 <label for="cat">Gato</label>
-                <input type="radio" id="cat" value="cat" name="pet"/>
+                <input type="radio" id="cat" value="cat" name="pet" required/>
             </div>
         </div>
         <div class="comments">
             <div class="inputBox">
                 <label for="comment">Detallanos tu consulta:</label>
-                <textarea></textarea>
+                <textarea required></textarea>
             </div>
             <button class="btnContact">Enviar</button>
+            <p>* Es requerido al menos uno de los campos</p>
         </div>
     </form>
     <div class="footer">
-        <div>
-            <h3>Visita nuestras redes sociales!</h3>
-        </div>
+        <a href="#" class="fa fa-facebook"></a>
+        <a href="#" class="fa fa-instagram"></a>
     </div>
     <div class="loader"></div>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"
@@ -72,7 +69,6 @@
     crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="js/articulos.js"></script>
     <script src="js/main.js"></script>
 </body>
 </html>
