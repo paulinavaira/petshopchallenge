@@ -1,16 +1,11 @@
-//Loader
-
-  $(window).on("load",function(){
+ $(window).on("load",function(){
     $(".loader").fadeOut(2500);
   });
 
-//No recargar página
 
   $(".btnContact").submit(function(e) {
     e.preventDefault();
 });
-
-//ALERT Contact
 
 $('.btnContact').click(function(){  
   swal({
@@ -31,7 +26,6 @@ $('.btnContact').click(function(){
   });
 });
 
-//Pido info a la API
 fetch('https://apipetshop.herokuapp.com/api/articulos')
   .then(function(response) {
     return response.json();
@@ -41,7 +35,6 @@ fetch('https://apipetshop.herokuapp.com/api/articulos')
     miPrograma(data);
   });
 
-//Información
 
 function miPrograma(data){
     var app = new Vue({
@@ -52,7 +45,6 @@ function miPrograma(data){
 }
 });
 
-//Obtengo los datos para el catálogo 'Farmacia' y 'Juguetes'
 var toys = data.filter(function(toys) {
     return toys.tipo == 'Juguete';
 });
